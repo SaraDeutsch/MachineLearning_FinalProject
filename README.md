@@ -17,7 +17,7 @@ For this project, I will create four machine learning models [a regression model
 For this model, I will use Logistic Regression to classify which digit is written based on the number’s features. After training the data, I tested the model with some new data. The training accuracy is 0.9978 , while the testing accuracy is 0.9629. These numbers along with the time taken to train and query the data [a training time of 0.1891; a query time of 0.0022 ] seem to prove that this is a good model. For a visual, I attached a Confusion matrix. 
 
 
-![regression_matrix](ml_regression.png)
+![regression_matrix](ml_logistic_regression.png)
 
 This matrix proves that this is a good model. Most of the predictions of numbers matched up with their target values. Especially considering the many samples that were taken, very few of them were mistaken.
 
