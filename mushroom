@@ -1,0 +1,22 @@
+import pandas as pd
+from sklearn import datasets
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score,classification_report,confusion_matrix,ConfusionMatrixDisplay
+from sklearn.model_selection import train_test_split
+import matplotlib.pyplot as plt
+from sklearn.preprocessing import OneHotEncoder
+
+# load dataset
+mushroom = pd.read_csv('agaricus-lepiota.csv')
+
+mushroom_encoded = OneHotEncoder(dtype= 'float')
+mushroom_encoded.fit(mushroom)
+
+y = mushroom['poisonous']
+del mushroom['poisonous']
+X = mushroom
+mushroom.head()
+
+
+# split dataset
+X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=42)
